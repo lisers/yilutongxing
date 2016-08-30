@@ -1,0 +1,26 @@
+<template name="gps">
+  {{#ionModal customTemplate=true}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">GPS地形录入</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">保存</button>
+      </div>
+      <div class="content has-header">
+            <label class="item item-input">
+              <span class="input-label" >名称:</span>
+              <input type="text" id="mc" name="mc" value="{{mc}}" maxlength="5" >
+            </label>
+            <label class="item item-input">
+              <span class="input-label">类型:</span>
+              <select id="lx" name="lx" value="{{lx}}">
+              <option value="水塘">水塘</option>
+              <option value="河流">河流</option>
+              <option value="道路">道路</option>
+              <option value="网吧">网吧</option>
+              <option value="学校">学校</option>
+              </select>
+            </label>
+      </div> 
+    
+  {{/ionModal}}
+</template>

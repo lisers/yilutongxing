@@ -1,0 +1,94 @@
+<template name="jh_update">
+        {{#ionModal customTemplate=true}}
+        <style type="text/css">
+        .kuan{margin:0px;padding:0px;height: 49px;width: 100%;line-height: 46px;font-size: 16px;}
+        </style>
+        <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+        <h2 class="title">实际监护情况</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">下一步</button>
+        </div>
+            <div class="content has-header ">
+            {{#with veh}}
+            <div class="kuan" style="border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;">
+              &nbsp;&nbsp;&nbsp;<span>父母双方同时外出:</span>&nbsp;&nbsp;
+              <input type="radio" name="fmwc"  id="fmwc" value="是">是&nbsp;&nbsp;
+              <input type="radio" name="fmwc"  id="fmwc" value="否">否
+              </div>
+            <!-- <label class="item item-input">
+              <span class="input-label">父母双方同时外出:</span>
+              <select id="gxj" name="gxj" value="{{gxj}}">
+              <option value="是">是</option>
+              <option value="否">否</option>
+              </select>
+            </label> -->
+            <div class="kuan" style="border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;">
+              &nbsp;&nbsp;&nbsp;<span>父母一方外出、另一方无监护能力:</span>&nbsp;&nbsp;
+              <input type="radio" name="s_fmwc"  id="s_fmwc" value="是">是&nbsp;&nbsp;
+              <input type="radio" name="s_fmwc"  id="s_fmwc" value="否">否
+              </div>
+            <!-- <label class="item item-input">
+              <span class="input-label">父母一方外出、另一方无监护能力:</span>
+              <select id="xmj" name="xmj" value="{{xmj}}">
+              <option value="是">是</option>
+              <option value="否">否</option>
+              </select>
+            </label> -->
+            <div class="kuan" style="border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;">
+              &nbsp;&nbsp;&nbsp;<span>无监护能力:</span>&nbsp;&nbsp;
+              <input type="radio" name="wjhnl"  id="wjhnl" value="父亲">父亲&nbsp;&nbsp;
+              <input type="radio" name="wjhnl"  id="wjhnl" value="母亲">母亲
+              </div>
+            <!-- <label class="item item-input">
+              <span class="input-label">无监护能力:</span>
+              <select id="xmj" name="xmj" value="{{xmj}}">
+              <option value="父亲">父亲</option>
+              <option value="父亲">母亲</option>
+              </select> 
+            </label>-->
+            <div class="kuan" style="border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;">
+              &nbsp;&nbsp;&nbsp;<span>父母外出有无委托其他监护人:</span>&nbsp;&nbsp;
+              <input type="radio" name="qtjhr"  id="qtjhr" value="是">是&nbsp;&nbsp;
+              <input type="radio" name="qtjhr"  id="qtjhr" value="否">否
+              </div>
+            <!-- <label class="item item-input">
+              <span class="input-label">父母外出有无委托其他监护人:</span>
+              <select id="telj" name="telj" value="{{telj}}">
+              <option value="是">是</option>
+              <option value="否">否</option>
+              </select>
+            </label> -->
+            <label class="item item-input">
+              <span class="input-label">监护类型:</span>
+              <select id="jhlx" name="jhlx" value="{{jhlx}}">
+              <option value="无人监护">无人监护</option>
+              <option value="父或母无监护能力">父或母无监护能力</option>
+              <option value="受委托监护人监护能力不足">受委托监护人监护能力不足</option>
+              <option value="监护情况一般">监护情况一般</option>
+              <option value="监护情况较好">监护情况较好</option>
+              </select>
+            </label>
+            <label class="item item-input">
+              <span class="input-label">与被监护人关系:</span>
+              <input type="text" id="gx" name="gx" value="{{gx}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">受委托监护人姓名:</span>
+              <input type="text" id="jhr_xm" name="jhr_xm" value="{{jhr_xm}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">受委托监护人电话:</span>
+              <input type="text" id="jhr_tel" name="jhr_tel" value="{{jhr_tel}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">公民身份号码:</span>
+              <input type="text" id="jhr_sfz" name="jhr_sfz" value="{{jhr_sfz}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">居住地地址:</span>
+              <input type="text" id="jhr_jzdz" name="jhr_jzdz" value="{{jhr_jzdz}}">
+            </label>
+            {{/with}}
+            </div>
+        {{/ionModal}}
+    </template>

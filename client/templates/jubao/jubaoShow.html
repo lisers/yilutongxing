@@ -1,0 +1,22 @@
+<template name="jubaoShow">
+
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton class="button-positive" text=false}}
+  {{/contentFor}}
+
+
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">举报详细</h1>
+  {{/contentFor}}
+
+    {{#ionView}}
+    {{#ionContent}}
+		  {{#ionList}}
+			{{#each jubao}}
+			  {{> _jubaoItem product=this path="jubaoXQ"}}
+			{{/each}}
+		  {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

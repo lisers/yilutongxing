@@ -1,0 +1,39 @@
+<template name="appLayout">
+
+  {{#ionBody}}
+    {{> ionNavBar}}
+
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
+
+    {{#if isAndroid}}
+      {{#ionTabs style="ios"}}
+        {{> ionTab title="地图" path="map" iconOff="ios-world-outline" iconOn="ios-world" class="tab-item-positive"}}
+        {{> ionTab title="我的" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}
+    {{/ionTabs}}
+    {{else}}
+      {{#ionTabs style="ios"}}
+        {{> ionTab title="地图" path="map" iconOff="ios-world-outline" iconOn="ios-world" class="tab-item-positive"}}
+        {{> ionTab title="我的" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}
+      {{/ionTabs}}
+    {{/if}}
+
+    <div class="notifications">
+        {{#unless connected}}
+          <div class="notification">
+            <span class="icon-sync"></span>
+            <div class="title-notification">网络连接中断，尝试重新连接服务器</div>
+          </div>
+        {{/unless}}
+        {{#each notifications}}
+          <div class="notification">
+            <a class="btn-primary js-notification-action">{{action}}</a>
+            <div class="title-notification">{{title}}</div>
+          </div>
+        {{/each}}
+    </div>
+      
+  {{/ionBody}}
+
+</template>

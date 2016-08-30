@@ -1,0 +1,28 @@
+<template name="cheliang">
+
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+      {{> ionIcon icon='ios-search'}}
+    </button>
+  {{/contentFor}}
+  
+    <!-- 这里添加一个按钮 -->
+
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">抓拍信息</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		  {{#ionList}}
+			{{#each cheliang}}
+			  {{> _cheliangItem product=this path="cheLiangXQ"}}
+			  
+			{{/each}}
+			
+		  {{/ionList}} 
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

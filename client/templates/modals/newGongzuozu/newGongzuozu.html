@@ -1,0 +1,21 @@
+<template name="newGongzuozu">
+  {{#ionModal customTemplate=true}}
+
+	{{# autoForm collection="Gongzuozu" id="gongzuozu-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">新增工作组</h2>
+        <button type="submit" class="button button-positive button-clear">保存</button>
+      </div>
+      <div class="content has-header ">
+      <!--<div class="bdimg">
+        <img id="bdimg" src="http://api.map.baidu.com/panorama/v2?ak=HLpGNhrWuTiGN6vqXDxqFHi7&width=512&height=300&location={{ bdLocation}}&fov=180">
+      </div>-->
+        {{> afQuickField name="address" value=gaddress }}
+        {{> afQuickField name="name"}}
+        {{> afQuickField name="note"}}
+        {{> afQuickField name="interval"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

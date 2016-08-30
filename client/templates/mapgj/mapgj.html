@@ -1,0 +1,40 @@
+<template name="mapgj">
+  
+   {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton class="button-positive" text=false}}
+  {{/contentFor}}
+   
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="other-gj" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-list-outline'}}
+    </button>
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">车辆轨迹</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+<!--    <div class="map-container"> 
+-->
+    {{> googleMap name="map" options=mapOptions}}
+
+<!--	</div> -->
+
+		<div style="margin-left: 0px; margin-right: 0px; z-index: 10000001; position: absolute; left: 0px; bottom: 0px;">
+		<div style="width: 100px; height: 100px; cursor: pointer;">
+		<img src="/images/mygps.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 100px;">
+		</div>
+		</div>
+		<div id="map" style="width:800px; height:800px;"></div>
+    {{/ionContent}}
+  {{/ionView}}
+  
+  
+
+   
+
+
+</template>

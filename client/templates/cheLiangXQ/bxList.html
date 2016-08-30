@@ -1,0 +1,36 @@
+<template name="bxList">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">事故现场拍照</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+      <div class="product-detail">
+          
+          <div class="padding product-detail-upvotes">
+          	<div class="googleimg">
+          		<img id="bdimg" src="http://maps.google.cn/maps/api/staticmap?center={{marker}}&zoom=17&size=512x400&sensor=false&markers={{marker}}&scale=2">
+          </div>
+		  </div>
+		  
+          <div class="padding product-detail-upvotes">
+
+          </div>
+      </div>
+		  {{#each photos}}
+		  <div style="padding-left: 2px;min-height: 72px;" class="item item-button-right">
+		   
+		    <h2>{{title}}</h2>
+			<br/>
+			<img style="width:360px;height:220px" src="{{photo}}">
+            <button class="button button-positive" style="top: 58px;right: 12px;" data-action="{{share_cam}}">{{> ionIcon icon="icon ion-ios-camera-outline"}}</button>
+      </div>
+      
+        {{/each}}
+
+    {{/ionContent}}
+  {{/ionView}}
+
+  
+</template>

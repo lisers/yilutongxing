@@ -1,0 +1,46 @@
+<template name="cheLiangXQ">
+
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton class="button-positive" text=false}}
+  {{/contentFor}}
+
+  <!--{{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="share-product" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-upload-outline'}}
+    </button>
+  {{/contentFor}}-->
+  
+  
+    {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="share-camm" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-camera-outline'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">详细</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+	 
+      <div class="product-detail">
+
+         {{#each photos}}
+
+            {{#ionItem iconLeft=false iconRight=false class="item-text-wrap"}}
+				  <div><img src={{photo}} height="100%" width="100%"></div>
+				  <div><h5>{{ title}}</h5></div>
+				  <div><p>
+					{{fx}} 
+				  </p></div>
+            {{/ionItem}}
+		  
+        {{/each}}
+		
+      </div>
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

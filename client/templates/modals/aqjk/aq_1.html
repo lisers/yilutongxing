@@ -1,0 +1,49 @@
+<template name="aq_1">
+  {{#ionModal customTemplate=true}}
+    <style type="text/css">
+    input{height: 30px;width: 100%;}
+    </style>
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">信息录入</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">下一步</button>
+      </div>
+      <div class="content has-header">          
+            <label class="item item-input">
+              <span class="input-label" >姓名:</span>
+              <input type="text" id="xm" name="xm" value="{{xm}}" maxlength="5" >
+            </label>
+            <label class="item item-input">
+              <span class="input-label">性别:</span>
+              <input type="text" id="xb" name="xb" value="{{xb}}" maxlength="1"> 
+            </label> 
+            <label class="item item-input">
+              <span class="input-label">出生年月:</span>
+              <input type="date" id="csny" name="csny" value="{{csny}}" >
+            </label>
+            <label class="item item-input">
+              <span class="input-label">就读学校:</span>
+              <input type="text" id="xx" name="xx" value="{{xx}}" maxlength="">
+            </label>
+            <p style="height:30px;width: 100%;line-height: 30px;text-align: center; font-weight: bold;">周一至周五上下学情况</p>
+            <label class="item item-input">
+              <span class="input-label">上学时间:</span>
+              <input type="time" id="sx_1" name="sx_1" value="{{sx_1}}" class="" maxlength="" style="width: 20%;">至<input type="time" id="sx_2" name="sx_2" value="{{sx_2}}" class="" maxlength="" style="width: 20%;">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">放学时间:</span>
+              <input type="time" id="fx_1" name="fx_1" value="{{fx_1}}" class="" maxlength="" style="width: 20%;" >至<input type="time" id="fx_2" name="fx_2" value="{{fx_2}}" class="" maxlength="" style="width: 20%;">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">地点:</span>
+              <input type="text" id="cf_dd" name="cf_dd" value="{{cf_dd}}" maxlength="" style="">至<input type="text" id="dd_dd" name="dd_dd" value="{{dd_dd}}" maxlength="" style="">共
+              <br/><input type="number" id="gl" name="gl" value="{{gl}}" maxlength="" style="">公里
+            </label>
+            <label class="item item-input">
+              <span class="input-label">主要危险地点:</span>
+              <input type="text" id="sx_wxdd" name="sx_wxdd" value="{{sx_wxdd}}" maxlength="" >
+            </label>
+      </div> 
+    
+  {{/ionModal}}
+</template>

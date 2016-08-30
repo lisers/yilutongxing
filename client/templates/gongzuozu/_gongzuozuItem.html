@@ -1,0 +1,22 @@
+<template name="_gongzuozuItem">
+  {{#with product}}
+    {{#ionItem path=../path iconLeft=true iconRight=true}}
+      {{> _votencButton}} 
+      
+	  <!--<img src={{image}} height=100>-->
+     
+      <h3>工作组名：{{ name}}</h3>
+      <p>添加时间：
+        {{ dateYMD createdAt}}
+      </p>
+	  <p>&nbsp;&nbsp; 地&nbsp; &nbsp; 点：
+        {{address}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+
+  {{/with}}
+</template>

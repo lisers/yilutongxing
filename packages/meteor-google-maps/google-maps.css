@@ -1,0 +1,174 @@
+/* CSS declarations go here */
+
+
+
+.google-map {
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  height: 100%;
+}
+
+.map-container {
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+
+
+.gmnoprint{
+display:on;
+}
+
+.gm-style-iw{
+display:on;
+}
+
+.view-link{
+display:none;
+}
+
+.gmnoscreen{
+display:none;
+}
+
+.gmnoprint.gm-style-cc{
+  display:none;
+}
+
+.bdimg {
+	height:200px;
+	width:100%;
+}
+.bdimg img {
+	top:-40px;
+	width:100%;
+    position:absolute; 
+    clip:rect(40px 512px 240px 0px);
+ }
+
+.googleimg {
+	height:200px;
+	width:100%;
+}
+
+.googleimg img {
+	top: -80px;
+	width: 100%;
+	clip: rect(80px 512px 280px 0px);
+}
+
+/*
+.overflow-scroll {
+  overflow-y: hidden;
+}
+*/
+
+/* 地图动画 */
+#Tracer{
+	position: absolute;
+	left: 73%;
+	top: 67%;
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 -8px;
+	background: #fff;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+#Tracer::after{
+	content: "";
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	left: 4px;
+	top: 4px;
+	background: #dcc6de;
+	border-radius: 4px;
+}
+#Tracer .ring{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: 5px solid #FF0000;
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -20px;
+	opacity: 0;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	border-radius: 50px;
+	-webkit-animation: trace 1s infinite linear;
+	-moz-animation: trace 1s infinite linear;
+	-ms-animation: trace 1s infinite linear;
+	-o-animation: trace 1s infinite linear;
+	animation: trace 1s infinite linear;
+}
+#Tracer .ring:last-of-type{
+	-webkit-animation-delay: .5s;
+	-moz-animation-delay: .5s;
+	-ms-animation-delay: .5s;
+	-o-animation-delay: .5s;
+	animation-delay: .5s;
+}
+@-webkit-keyframes trace{
+	0%{
+		-webkit-transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes trace{
+	0%{
+		-moz-transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		-moz-transform: scale(1);
+		opacity: 0;
+	}
+}
+@-ms-keyframes trace{
+	0%{
+		-ms-transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		-ms-transform: scale(1);
+		opacity: 0;
+	}
+}
+@-o-keyframes trace{
+	0%{
+		-o-transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		-o-transform: scale(1);
+		opacity: 0;
+	}
+}
+@keyframes trace{
+	0%{
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+/* 地图动画 end */

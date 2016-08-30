@@ -1,0 +1,20 @@
+<template name="newBj">
+  {{#ionModal customTemplate=true}}
+    {{# autoForm collection="Bjs" id="bj-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">事故报警</h2>
+        <button type="submit" class="button button-positive button-clear">报警</button>
+      </div>
+      <div class="content has-header ">
+	    <div class="googleimg">
+          <img id="bdimg" src="http://maps.google.cn/maps/api/staticmap?center={{ gcjLocation}}&zoom=17&size=512x400&sensor=true&markers={{ gcjLocation}}&scale=2">
+        </div>
+        {{> afQuickField name="address" value=gaddress}}
+        {{> afQuickField name="url" type="url"}}
+        {{> afQuickField name="name"}}
+        {{> afQuickField name="tagline"}}
+      </div>
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

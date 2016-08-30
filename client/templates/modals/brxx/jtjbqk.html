@@ -1,0 +1,55 @@
+<template name="jt">
+  {{#ionModal customTemplate=true}}
+    <style type="text/css">
+      input{height: 30px;width: 100%;}
+      div{width: 100%;}
+      p{width: 100%;height: 30px;line-height: 30px;}
+      input{height: 40%;line-height: 30px;width: 5%;}
+    </style>
+    <div class="bar bar-header bar-stable">
+      <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+      <h2 class="title">求助需求</h2>
+      <button type="submit" class="button button-positive button-clear" data-action="save">保存</button>
+    </div>
+    <div class="content has-header ">
+    
+    {{#with veh}}
+      <div>
+        &nbsp;&nbsp;<span>家庭经济来源:</span>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="打工收入" name="jjly" id="jjly1">打工收入</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="种养殖业" name="jjly" id="jjly2">种养殖业</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="政府救助" name="jjly" id="jjly3">政府救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="亲朋接济" name="jjly" id="jjly4">亲朋接济</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="其他" name="jjly" id="jjly5">其他</p>
+        <!-- <label class="item item-input">
+              <span class="input-label">其他:</span>
+              <input type="text" id="jjly5" name="jjly" value="{{sfz}}" maxlength="200">
+        </label>
+      </div> -->
+      <div>
+        &nbsp;&nbsp;<span>救助帮扶情况:</span>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="享受低保" name="bfqk" id="bfqk1">享受低保</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="临时救助" name="bfqk" id="bfqk2">临时救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="医疗救助" name="bfqk" id="bfqk3">医疗救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="住房救助" name="bfqk" id="bfqk4">住房救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="其他救助" name="bfqk" id="bfqk5">其他救助</p>
+      </div>
+      <div>
+      &nbsp;&nbsp;<span>救助帮扶需求:</span>  <!-- 新增 -->
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="助学资助" name="bfxx" id="bfxx1">助学资助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="心理辅导" name="bfxx" id="bfxx2">心理辅导</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="医疗救助" name="bfxx" id="bfxx3">医疗救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="亲情陪伴" name="bfxx" id="bfxx4">亲情陪伴</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="习惯养成" name="bfxx" id="bfxx5">习惯养成</p>
+        <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="其他需求" name="bfxx" id="bfxx6">其他需求</p> -->
+        <label class="item item-input">
+              <span class="input-label">其他需求:</span>
+              <input type="text" id="bfxx6" name="bfxx" maxlength="200">
+        </label>
+      </div>
+      </div>
+        <input style="border:1px solid #ccc;height: 150px;width: 100%;" type="text" id="qtqk" name="qtqk" value="{{qtqk}}"  placeholder="其他情况" maxlength="200">
+    {{/with}}
+    </div>
+  {{/ionModal}}
+</template>

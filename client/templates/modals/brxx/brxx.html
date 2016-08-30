@@ -1,0 +1,106 @@
+<template name="br">
+  {{#ionModal customTemplate=true}}
+    <style type="text/css">
+      .kuan{margin:0px;padding:0px;height: 49px;width: 100%;line-height: 46px;font-size: 16px;border-bottom: 1px solid #ccc;}
+    </style>
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">留守儿童个人基本情况</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">下一步</button>
+      </div>
+      <div class="content has-header">
+        <div style="width: 100%;height: 144px; margin: 0;padding: 0;">
+            
+          <div style="width:65%;height: 144px;display: block;float: left;">
+               <label class="item item-input">
+              <span class="input-label" >姓名:</span>
+              <input type="text" id="xm" name="xm" value="{{xm}}" maxlength="5" >
+            </label>
+              <div class="kuan" style="border-right: 1px solid #ccc;">
+              &nbsp;&nbsp;&nbsp;<span>性别:</span>&nbsp;&nbsp;
+              <input type="radio" name="xb"  id="xb1" value="男">男&nbsp;&nbsp;
+              <input type="radio" name="xb"  id="xb2" value="女">女
+              </div>
+            
+            <label class="item item-input">
+              <span class="input-label">民族:</span>
+              <input type="text" id="mz" name="mz" value="{{mz}}" maxlength="10"> 
+            </label> 
+          </div>
+          <div style="width: 35%;height: 144px;display: block;float: left;"  >
+               <img style="width:100%;height:144px;" src="{{photo}}" data-action="photo">
+            </div>
+        </div>
+            <label class="item item-input">
+              <span class="input-label">出生年月:</span>
+              <input type="date" id="csny" name="csny" value="{{csny}}" >
+            </label>
+            <label class="item item-input">
+              <span class="input-label">公民身份证号码:</span>
+              <input type="text" id="sfz" name="sfz" value="{{sfz}}" maxlength="18">
+            </label>
+            <div class="kuan">
+              &nbsp;&nbsp;&nbsp;<span>是否登记户口:</span>&nbsp;&nbsp;
+              <input type="radio" name="hkdj"  id="hkdj" value="是">是&nbsp;&nbsp;
+              <input type="radio" name="hkdj"  id="hkdj" value="否">否
+              </div>
+            <label class="item item-input">
+              <span class="input-label">户籍所在地:</span>
+              <input type="text" id="hjszd" name="hjszd" value="{{hjszd}}" maxlength="50">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">现居住地址:</span>
+              <input type="text" id="xjzdz" name="xjzdz" value="{{xjzdz}}" maxlength="50">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">现居住地址经纬度:</span>
+              <input type="text" id="xjzdzjwd" name="xjzdzjwd" value="{{xjzdzjwd}}" maxlength="50">     <!-- 新增 -->
+            </label>
+            <div class="kuan">
+              &nbsp;&nbsp;&nbsp;<span>身体情况:</span>&nbsp;&nbsp;
+              <input type="radio" name="stqk1"  id="stqk" value="健康">健康&nbsp;&nbsp;
+              <input type="radio" name="stqk2"  id="stqk" value="患病">患病&nbsp;&nbsp;
+              <input type="radio" name="stqk3"  id="stqk" value="残疾">残疾
+              </div>
+            <label class="item item-input">
+              <span class="input-label">残疾类别:</span>
+              <input type="text" id="cjlb" name="cjlb" value="{{cjlb}}" maxlength="11">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">患病类型:</span>
+              <input type="text" id="hblx" name="hblx" value="{{hblx}}" maxlength="30">
+            </label>
+            <div class="kuan">
+              &nbsp;&nbsp;&nbsp;<span>是否学校寄宿:</span>&nbsp;&nbsp;
+              <input type="radio" name="xxjs1"  id="xxjs" value="是">是&nbsp;&nbsp;
+              <input type="radio" name="xxjs2"  id="xxjs" value="否">否
+              </div>
+            <div class="kuan" style="height: 100px;">
+              &nbsp;&nbsp;&nbsp;<span>就学情况:</span>&nbsp;&nbsp;
+              <input type="radio" name="jxqk1"  id="jxqk" value="未入园">未入园&nbsp;&nbsp;
+              <input type="radio" name="jxqk2"  id="jxqk" value="幼儿园">幼儿园&nbsp;&nbsp;
+              <input type="radio" name="jxqk3"  id="jxqk" value="小学">小学&nbsp;&nbsp;
+              <input type="radio" name="jxqk4"  id="jxqk" value="初中">初中<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="jxqk5"  id="jxqk" value="高中">高中&nbsp;&nbsp;
+              <input type="radio" name="jxqk6"  id="jxqk" value="中职">中职&nbsp;&nbsp;
+              <input type="radio" name="jxqk7"  id="jxqk" value="辍学">辍学&nbsp;&nbsp;
+              <input type="radio" name="jxqk7"  id="jxqk" value="不在学">不在学
+            </div>
+            <div class="kuan" style="height: 100px;width: 100%;"> <!-- 新增 -->
+              &nbsp;&nbsp;&nbsp;<span>学习情况:</span>&nbsp;&nbsp;
+              <input type="radio" name="xxqk1"  id="xxqk" value="很差">很差&nbsp;&nbsp;
+              <input type="radio" name="xxqk2"  id="xxqk" value="较差">较差&nbsp;&nbsp;
+              <input type="radio" name="xxqk3"  id="xxqk" value="一般">一般&nbsp;&nbsp;
+              <input type="radio" name="xxqk4"  id="xxqk" value="较好">较好<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="xxqk5"  id="xxqk" value="很好">很好
+            </div>
+            <div class="kuan" style="height: 100px;">
+              &nbsp;&nbsp;&nbsp;<span>留守类型:</span>&nbsp;&nbsp;
+              <input type="radio" name="lslx1"  id="lslx" value="父母在外务工">父母在外务工&nbsp;&nbsp;
+              <input type="radio" name="lslx2"  id="lslx" value="孤儿">孤儿<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="lslx3"  id="lslx" value="事实孤儿">事实孤儿
+            </div>
+      </div> 
+    
+  {{/ionModal}}
+</template>

@@ -1,0 +1,40 @@
+<template name="aq_3">
+  {{#ionModal customTemplate=true}}
+    <div class="bar bar-header bar-stable">
+      <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+      <h2 class="title">假期情况</h2>
+      <button type="submit" class="button button-positive button-clear" data-action="save">保存</button>
+      </div>
+    <div class="content has-header ">
+
+      {{#with veh}}
+        <p style="height:30px;width: 100%;line-height: 30px;text-align: center; font-weight: bold;">寒假</p>
+        <label class="item item-input">
+          <span class="input-label">居住地点:&nbsp;&nbsp;</span>
+          <input type="text" id="hj_jzdd" name="hj_jzdd" value="{{hj_jzdd}}">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">其他常去地点:</span>
+          <input type="text" id="hj_cqdd" name="hj_cqdd" value="{{hj_cqdd}}">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">主要危险地点:</span>
+          <input type="text" id="hj_wxdd" name="hj_wxdd" value="{{hj_wxdd}}">
+        </label>
+        <p style="height:30px;width: 100%;line-height: 30px;text-align: center; font-weight: bold;">暑假</p>
+        <label class="item item-input">
+          <span class="input-label">居住地点:&nbsp;&nbsp;</span>
+          <input type="text" id="sj_jzdd" name="sj_jzdd" value="{{sj_jzdd}}">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">其他常去地点:</span>
+          <input type="text" id="sj_cqdd" name="sj_cqdd" value="{{sj_cqdd}}">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">主要危险地点:</span>
+          <input type="text" id="sj_wxdd" name="sj_wxdd" value="{{sj_wxdd}}">
+        </label>
+      {{/with}}
+    </div>
+  {{/ionModal}}
+</template>

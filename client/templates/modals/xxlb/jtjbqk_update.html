@@ -1,0 +1,36 @@
+<template name="jt_update">
+  {{#ionModal customTemplate=true}}
+    <style type="text/css">
+      input{height: 30px;width: 100%;}
+      div{width: 100%;}
+      p{width: 100%;height: 30px;line-height: 30px;}
+      input{height: 40%;line-height: 30px;width: 5%;}
+    </style>
+    <div class="bar bar-header bar-stable">
+      <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+      <h2 class="title">求助需求</h2>
+      <button type="submit" class="button button-positive button-clear" data-action="save">保存</button>
+    </div>
+    <div class="content has-header ">
+    
+    {{#with veh}}
+      <div>
+        &nbsp;&nbsp;<span>家庭经济来源:</span>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="打工收入" name="jjly" id="jjly1">打工收入</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="种养殖业" name="jjly" id="jjly2">种养殖业</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="政府救助" name="jjly" id="jjly3">政府救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="亲朋接济" name="jjly" id="jjly4">亲朋接济</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="其他" name="jjly" id="jjly5">其他</p>
+      </div>
+      <div>
+        &nbsp;&nbsp;<span>救助帮扶情况:</span>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="享受低保" name="bfqk" id="bfqk1">享受低保</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="临时救助" name="bfqk" id="bfqk2">临时救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="医疗救助" name="bfqk" id="bfqk3">医疗救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="住房救助" name="bfqk" id="bfqk4">住房救助</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="其他救助" name="bfqk" id="bfqk5">其他救助</p>
+      </div>
+    {{/with}}
+    </div>
+  {{/ionModal}}
+</template>

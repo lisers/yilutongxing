@@ -1,0 +1,22 @@
+<template name="_jubaoItem">
+  {{#with product}}
+    {{#ionItem path=../path iconLeft=true iconRight=true}}
+      {{> _votencButton}} 
+      
+	  <!--<img src={{image}} height=100>-->
+       <!-- 添加举报输出的地方-->
+	  <h3>举报：{{ jubao}}</h3>
+      <p>抓拍时间：
+        {{ dateYMD createdAt}}
+      </p>
+	  <p>&nbsp;&nbsp; 地&nbsp; &nbsp; 点：
+        {{address}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+
+  {{/with}}
+</template>

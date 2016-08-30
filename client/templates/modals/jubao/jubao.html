@@ -1,0 +1,25 @@
+<template name="ju">
+  {{#ionModal customTemplate=true}}
+    {{# autoForm collection="Jubao" id="jubao-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">取消</button>
+        <h2 class="title">我要举报</h2>
+        <button type="submit" class="button button-positive button-clear">举报</button>
+      </div>
+      <div class="content has-header ">
+        {{> afQuickField name="address" value=gaddress}}
+		{{> afQuickField name="jubao"}}
+        {{> afQuickField name="note"}}
+        {{> afQuickField name="interval"}}
+      </div>
+	     <!-- {{> afQuickField name="address" value=gaddress}}
+		{{> afQuickField name="cl_id"}}
+		{{> afQuickField name="zuhao"}}
+		{{> afQuickField name="jubao"}}
+		{{> afQuickField name="hphm"}}
+		{{> afQuickField name="hpzl"}}
+		{{> afQuickField name="note"}}
+-->
+    {{/autoForm}}
+  {{/ionModal}}
+</template>

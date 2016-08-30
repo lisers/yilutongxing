@@ -1,0 +1,30 @@
+<template name="gongzuozu">
+
+  {{#contentFor "headerButtonLeft"}}
+    <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+      {{> ionIcon icon='ios-search'}}
+    </button>
+  {{/contentFor}}
+  
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="gongzuozuBT" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-camera-outline'}}
+    </button>
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">工作组列表</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+		  {{#ionList}}
+			{{#each gongzuozu}}
+			  {{> _gongzuozuItem product=this path="gongzuozuXQ"}}
+			{{/each}}
+		  {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+  
+
+</template>

@@ -1,0 +1,38 @@
+<template name="aq_2">
+  {{#ionModal customTemplate=true}}
+    <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+        <h2 class="title">周末情况</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">下一步</button>
+        </div>
+        <div class="content has-header ">
+			{{#with veh}}
+			   <label class="item item-input">
+            <select name="zm_1" id="zm_1" class="">
+              <option value="周六">周六</option>
+              <option value="周日">周日</option>
+            </select>
+            &nbsp;&nbsp;<input type="text" id="dd_1" name="dd_1" value="" placeholder="   00:00至00:00在什么地方做什么">
+          </label>
+          <label class="item item-input">
+            <select name="zm_2" id="zm_2" class="">
+              <option value="周六">周六</option>
+              <option value="周日">周日</option>
+            </select>
+            &nbsp;&nbsp;<input type="text" id="dd_2" name="dd_2" value="" placeholder="   00:00至00:00在什么地方做什么">
+          </label>
+          <label class="item item-input">
+            <select name="zm_3" id="zm_3" class="">
+              <option value="周六">周六</option>
+              <option value="周日">周日</option>
+            </select>
+			     &nbsp;&nbsp;<input type="text" id="dd_3" name="dd_3" value="" placeholder="   00:00至00:00在什么地方做什么">
+			   </label>
+          <label class="item item-input">
+                  <span class="input-label">主要危险地点:&nbsp;&nbsp;</span>
+                  <input type="text" id="zm_wxdd" name="zm_wxdd" value="" maxlength="" >
+          </label>
+      {{/with}}
+    </div>
+  {{/ionModal}}
+</template>

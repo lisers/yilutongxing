@@ -1,0 +1,25 @@
+<template name="_notificationsItem">
+  {{#with product}}
+    {{#ionItem path=../path iconLeft=true iconRight=true}}
+      {{> _votencButton}} 
+      
+	  <!--<img src={{image}} height=100>-->
+     
+      <h3>发布时间：{{ dateYMD createdAt}}</h3>
+      <p>&nbsp;&nbsp; 地&nbsp; &nbsp; 点：
+        {{address}}
+      </p>
+	  <p>&nbsp;&nbsp; 内&nbsp; &nbsp; 容：
+        {{name}}
+      </p>
+	  <p>&nbsp;&nbsp; 备&nbsp; &nbsp; 注：
+        {{tagline}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+
+  {{/with}}
+</template>

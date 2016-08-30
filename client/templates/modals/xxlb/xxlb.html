@@ -1,0 +1,25 @@
+<template name="xxlb">
+
+  <div class="bar bar-header bar-stable">
+      <h1 class="title">儿童信息列表</h1>
+    <button type="submit" class="button button-positive button-clear" data-action="fh">返回</button>
+  </div>
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+      {{#each xxlb}}
+        <div class="product-detail" > 
+          {{#ionItem path="brUpdate" iconLeft=true iconRight=true}}
+            <h2 class="product-title">
+            <a href="{{pathFor 'brUpdate'}}" class="dark">姓名：{{xm}}</a></h2>
+            <p>身份证：{{sfz}}</p>
+            <p>现居地址：{{xjzdz}}</p>
+          {{/ionItem}}
+        </div>
+        {{/each}}
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

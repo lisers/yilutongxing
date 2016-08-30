@@ -1,0 +1,32 @@
+<template name="map">
+  
+  
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="share-cam" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-camera-outline'}}
+    </button>
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">地图周边</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+    {{> googleMap name="map" options=mapOptions}}
+
+<div style="margin-left: 0px; margin-right: 0px; z-index: 10000001; position: absolute; left: 0px; bottom: 0px;">
+<div style="width: 100px; height: 100px; cursor: pointer;">
+<img src="/images/mygps.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 100px; height: 100px;">
+</div>
+</div>
+    {{/ionContent}}
+  {{/ionView}}
+  
+  
+
+   
+
+
+</template>

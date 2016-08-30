@@ -1,0 +1,81 @@
+<template name="settings">
+  {{#ionModal title="设置"}}
+    <div class="list">
+      <div class="item item-divider">
+        帐号
+      </div>
+      <a class="item item-icon-left item-icon-right" href="#" data-action="sign-out">
+        {{> ionIcon icon="ios-locked"}}
+        退出
+        {{> ionIcon icon="ios-arrow-right"}}
+      </a>
+      
+       <div class="item item-divider">
+        配置信息
+      </div>
+     
+       <div class="item range range-positive">
+    <i class="icon ion-ios-sunny-outline"></i>
+    <input type="range" name="volume" min="0" max="100" value="33">
+    <i class="icon ion-ios-sunny"></i>
+  </div>
+  
+  <ul class="list">
+
+  <li class="item item-toggle">
+     接收动态交通信息
+     <label class="toggle toggle-assertive">
+     {{#if allowjtinfo}}
+       <input type="checkbox" checked >
+     {{else}}
+       <input type="checkbox"  >     
+     {{/if}}  
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+  
+    <label class="item item-input">
+    <span class="input-label">昵称</span>
+    <input type="text" value="{{ usersetting.profile.nickname}}">
+    </label>
+
+    <label class="item item-input">
+    <span class="input-label">身份证号码</span>
+    <input type="text" value="{{ usersetting.profile.sfzh}}">
+    </label>
+
+    <label class="item item-input">
+    <span class="input-label">电话号码</span>
+    <input type="text" value="{{ usersetting.phone}}">
+    </label>
+
+    <label class="item item-input">
+    <span class="input-label">车载设备ID</span>
+    <input type="text" value="{{ usersetting.profile.imei}}">
+    </label>
+    
+    <label class="item item-input">
+    <span class="input-label">车牌号码</span>
+    <input type="text" value="{{ usersetting.profile.hphm}}">
+    </label>    
+        
+    <label class="item item-input">
+    <span class="input-label">设备PIN码</span>
+    <input type="text" value="{{ usersetting.profile.pin}}">
+    </label>    
+
+</ul>
+     
+      <div class="item item-divider">
+        关于
+      </div>
+      <a class="item item-icon-left item-icon-right" href="http://interworking.cn" target="_blank">
+        {{> ionIcon icon="social-github"}}
+        更多
+        {{> ionIcon icon="ios-arrow-right"}}
+      </a>
+    </div>
+  {{/ionModal}}
+</template>

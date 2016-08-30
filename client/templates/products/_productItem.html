@@ -1,0 +1,19 @@
+<template name="_productItem">
+  {{#with product}}
+    {{#ionItem path=../path iconLeft=true iconRight=true}}
+      {{> _voteButton}} 
+	  {{> _voteDownButton}} 
+      <img src={{image}} height=100>
+     
+      <h5>{{ dateYMD createdAt}}</h5>
+      <p>
+        {{address}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+
+  {{/with}}
+</template>

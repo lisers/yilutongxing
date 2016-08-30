@@ -1,0 +1,44 @@
+<template name="jubaoXQ">
+
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton class="button-positive" text=false}}
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-action="share-product" data-product-id="{{product._id}}">
+      {{> ionIcon icon='ios-upload-outline'}}
+    </button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">举报具体详情</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+	
+      <div class="product-detail">
+
+         {{#with photos}}
+            {{#ionItem iconLeft=false iconRight=false class="item-text-wrap"}}
+				  <div><img src={{image}} height="100%" width="100%"></div>
+				  <div><h5>举报：{{ jubao}}</h5></div>
+				  <div>
+				        <p>&nbsp;&nbsp; 地&nbsp; &nbsp; 点：{{address}}</p>
+						<p>&nbsp;&nbsp; 备&nbsp; &nbsp; 注：
+								{{note}}
+						</p>
+						<p>添加时间：
+								{{ dateYMD createdAt}}
+						</p>
+					
+				  </div>
+            {{/ionItem}}
+        {{/with}}
+		
+      </div>
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

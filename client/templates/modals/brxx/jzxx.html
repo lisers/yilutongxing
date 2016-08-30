@@ -1,0 +1,87 @@
+    <template name="jz">
+        {{#ionModal customTemplate=true}}
+
+        <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear" data-action="up">上一步</button>
+        <h2 class="title">家庭情况</h2>
+        <button type="submit" class="button button-positive button-clear" data-action="save">下一步</button>
+        </div>
+        <div class="content has-header ">
+			{{#with veh}}
+			<label class="item item-input">
+			  <span class="input-label">祖父姓名:</span>
+			  <input type="text" id="zf_xm" name="zf_xm" value="{{zf_xm}}" maxlength="30">
+			</label>
+            <label class="item item-input">
+			  <span class="input-label">出生日期:</span>
+			  <input type="date" id="zf_csny" name="zf_csny" value="{{zf_csny}}">
+			</label>
+            <label class="item item-input">
+              <span class="input-label">祖母姓名:</span>
+              <input type="text" id="zm_xm" name="zm_xm" value="{{zm_xm}}" maxlength="30">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">出生日期:</span>
+              <input type="date" id="zm_csny" name="zm_csny" value="{{zm_csny}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">外祖父姓名:</span>
+              <input type="text" id="wzf_xm" name="wzf_xm" value="{{wzf_xm}}" maxlength="30">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">出生日期:</span>
+              <input type="date" id="wzf_csny" name="wzf_csny" value="{{wzf_csny}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">外祖母姓名:</span>
+              <input type="text" id="wzm_xm" name="wzm_xm" value="{{wzm_xm}}" maxlength="30">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">出生日期:</span>
+              <input type="date" id="wzm_csny" name="wzm_csny" value="{{wzm_csny}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">父亲姓名:</span>
+              <input type="text" id="fq_xm" name="fq_xm" value="{{fq_xm}}" maxlength="30">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">出生日期:</span>
+              <input type="date" id="fq_csny" name="fq_csny" value="{{fq_csny}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">联系电话:</span>
+              <input type="number" id="fq_tel" name="fq_tel" value="{{fq_tel}}" maxlength="11">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">父亲公民身份号码:</span>
+              <input type="text" id="fq_sfz" name="fq_sfz" value="{{fq_sfz}}" maxlength="18">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">当前务工地点:</span>
+              <input type="text" id="fq_wgdd" name="fq_wgdd" value="{{fq_wgdd}}" maxlength="50">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">母亲姓名:</span>
+              <input type="text" id="mq_xm" name="mq_xm" value="{{mq_xm}}" maxlength="30">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">出生日期:</span>
+              <input type="date" id="mq_csny" name="mq_csny" value="{{mq_csny}}">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">联系电话:</span>
+              <input type="text" id="mq_tel" name="mq_tel" value="{{mq_tel}}" maxlength="11">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">母亲公民身份号码:</span>
+              <input type="text" id="mq_sfz" name="mq_sfz" value="{{mq_sfz}}" maxlength="18">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">当前务工地点:</span>
+              <input type="text" id="mq_wgdd" name="mq_wgdd" value="{{mq_wgdd}}" maxlength="50">
+            </label>
+            {{/with}}
+            </div>
+
+        {{/ionModal}}
+    </template>
